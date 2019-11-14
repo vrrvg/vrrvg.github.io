@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
  <head>
-  <style type="text/css" id="26760718606"></style> 
+  <style type="text/css" id="26760718606"></style>  
   <title>VrR-VG - Visual-relevant Relationships</title> 
   <link rel="stylesheet" href="./dist/css/bootstrap.css" /> 
   <link rel="stylesheet" type="text/css" href="./dist/css/screen.css" /> 
@@ -17,15 +17,17 @@
 	}	
   </style>
  </head> 
+
  <body style="font-size: 16px;"> 
-  <div class="header" style="background-repeat: round;height:320px; width:100%;background-image: url(./img/bg.jpg)"> 
+
+  <div class="header" style="background-repeat: round;height:320px; width:100%;background-image: url(./img/bg_sg2.png)"> 
    <h3>&nbsp;</h3> 
    <div class="container"> 
 	<div class="row">
 	 <div class="col-sm-12" style="margin-top: 40px;">
-	  <h2 style="text-shadow: 0px 0px 10px #333;font-family:Helvetica; color:white">VrR-VG</h2> 
+	  <h2 style="text-shadow: 0px 0px 10px #333;font-family:Helvetica; color:white">VrR-VG : Visually-relevant Relationships</h2> 
 	  <br/>
-	  <h5 style="text-shadow: 0px 0px 10px #333;font-family:verdana; color:white">Visually-relevant Relationships</h5> 
+	  <h5 style="text-shadow: 0px 0px 10px #333;font-family:verdana; color:white"> What should be learned in visaul relationships.</h5> 
 	 </div> 
 	</div> 
    </div> 
@@ -36,10 +38,14 @@
 
 	 <a class="navbar-brand">VrR-VG</a>
 	</div>
+	
+
+
+
 	<div id="navbar" class="collapse navbar-collapse">
 	 <ul class="nav navbar-nav">
 	  <li><a href="#02">Abstract</a></li>
-	  <li><a href="#03">Details</a></li> 
+	  <li><a href="#03">Description</a></li> 
 	  <li><a href="#04">Download</a></li> 
 	  <li><a href="#05">Contact us</a></li> 
 	 </ul> 
@@ -56,6 +62,7 @@
 	    <main class="col-md-9 main-content"> 
 			<article id="02" class="post">
 					<div align="justify"> 
+					<h2 class="post-title"> Abstract </h2> 
 					 <h4> Why we research visual relationships?  </h4>
 					 <p>Visual relationships connect isolated instances into the structural graph. It provides a dimension in scene understanding, which is higher than the single instance and lower than the holistic scene. The visual relationships act as the bridge of perception and cognition. </p>
 
@@ -72,20 +79,21 @@
 					 <p> <strong>Visually-relevant relationships!</strong> The visually-irrelevant relationships like spatial relationships and low diversity relationships degrade the relation problems to detection or deductive reasoning. Those visually-irrelevant relationships pull back the relationships inferring to the perceptive side. To take advantage of relationship information for semantic understanding, Only the Visually-relevant relationships should be learned!</p>
 					</div> 
 				   </article> 
-	    <article id="02" class="post">
-
-	   <div align="justify"> 
+	   <!-- <article id="02" class="post">
+	    <div align="justify"> 
 		<h2 class="post-title">Abstract</h2> 
         <p style="font-family:Helvetica">   Relationships encode the interactions among individual instances and play a critical role in deep visual scene understanding. Suffering from the high predictability with non-visual information, relationship models tend to fit the statistical bias rather than 'learning' to infer the relationships from images. To encourage further development in visual relationships, we propose a novel method to mine more valuable relationships by automatically pruning visually-irrelevant relationships. We construct a new scene graph dataset named Visually-Relevant Relationships Dataset (VrR-VG) based on Visual Genome. Compared with existing datasets, the performance gap between learnable and statistical method is more significant in VrR-VG, and frequency-based analysis does not work anymore. Moreover, we propose to learn a relationship-aware representation by jointly considering instances, attributes and relationships. By applying the representation-aware feature learned on VrR-VG, the performances of image captioning and visual question answering are systematically improved, which demonstrates the effectiveness of both our dataset and features embedding schema. </p>
 	   </div> 
-	  </article> 
+	  </article>  --> 
+	 	
 	  <article id="03" class="post"> 
 	   <div align="justify"> 
-		<h2 class="post-title">Details</h2> 
+		<h2 class="post-title">Description</h2> 
 		<p>Visual-relevance Relationships dataset (VrR-VG) is a scene graph dataset from Visual Genome. It contains 117 visual-relevant relationships selected by our method.</p> 
 		<p>VrR-VG is constructed from Visual Genome. The VrR-VG has 58983 images and 23375 relation pairs. Excluded positional and statistiaclly biased reltionships, the VrR-VG is more balance and includes more valuable relaiton data.Rather than generating scene graph dataset by relation label frequency, the VrR-VG gathers visual-relevant relationships, like "play with", "lay on", "hang on", etc. The relationships like "on" , "wearing", "has",  etc., which can be inferred by positional information or data bias, are excluded in our dataset. The VrR-VG offers a more balanced research material for relationships, and more diverse relation data for semantic tasks.</p>
 		<p>Distribution comparison of datasets. The images in left column is from VG150, and the images in right is our VrR-VG. VrR-VG is more balance and diverse. </p>
 		<img height="130px" width="750px" src="./img/distribution_cmp.jpg" /> 
+		<p> </p>
         <p>Tag cloud comparison of dataset.</p>
 		<table class="table table-borderless" align="center"> 
 		<tbody> 
@@ -99,9 +107,10 @@
 			</tr> 
 		</tbody> 
 		</table> 
-		<p>Scene graph generation examples for VrR-VG and previous VG150(splited by label frequency). The images in left column is from VG150, and the images in right is our VrR-VG. </p>
+		<!-- <p>Scene graph generation examples for VrR-VG and previous VG150(splited by label frequency). The images in left column is from VG150, and the images in right is our VrR-VG. </p>
 		<img height="400px" width="750px" src="./img/web_sg1.jpg" />
 		<img height="400px" width="750px" src="./img/web_sg2.jpg" />
+		-->
 	   </div> 
 	  </article> 
 	  <article id="04" class="post"> 
@@ -110,12 +119,16 @@
 		<div> 
 		 <table class="table"> 
 		   <tr>
-			<td width="50%">Download</td> 
-			<td width="50%"> VrR-VG <a href="https://drive.google.com/open?id=15i5J87FHfZ1DwPkumBaH50nfOg01Ja8C">&nbsp;google drive</a></td>
+			<td width="40%">Download</td> 
+			<td width="30%"> VrR-VG <a href="https://drive.google.com/open?id=15i5J87FHfZ1DwPkumBaH50nfOg01Ja8C">&nbsp;google drive</a></td>
+			<td width="30%"> VD-Net <a href="https://github.com/vrrvg/vrrvg.github.io/blob/master/VD-Net.py">&nbsp; github </a></td>
 		   </tr> 
 		  </tbody> 
+		  <p> For scene graph generation, you can take the last 5000 samples as the test set. For features representation, you can use all the samples for training. </p>
+		  <p> An implemented example for VD-Net is also provided. For choosing our complete visually-relevant relationships, multiple initial learning rates (learning from 1e-5 to 1e-2, momentum is 0.9, weight decay is 1e-4) were used and we took 10 models for voting. Additionally, to avoid overfitting, the data sample should be completely random. In each batch, the relation triplets were from different images and the labels should be different from each other. </p>
 		 </table> 
 		</div> 
+
 	   </div> 
 	  </article> 
 	  <article id="05" class="post"> 
@@ -178,12 +191,12 @@
 	   </div> 
 	  </div> 
 	  <div class="widget"> 
-	   <h4 class="title">About</h4> 
+	   <h4 class="title">Paper</h4> 
 	   <div class="content community"> 
-		<p class="small"> Visual-relevant Relationships dataset. Paper and dataset released. 
-		<a href="https://arxiv.org/abs/1902.00313">Rethinking Visual Relationships for High-level Image Understanding. </a> </p> 
-		<p class="small"> VrR-VG paper update. 
-			<a href="https://arxiv.org/abs/1902.00313">VrR-VG: Refocusing Visually-Relevant Relationships. </a> </p> 
+		<p class="small"> VrR-VG arxiv versino update. </p>
+		<p>	<a href="https://arxiv.org/abs/1902.00313">VrR-VG: Refocusing Visually-Relevant Relationships. </a> </p> 
+		<p class="small"> ICCV version update. </p>	
+		<p>	<a href="http://202.117.4.101/cache/12/03/openaccess.thecvf.com/47beef6649903f94f9e6545d7de35f64/Liang_VrR-VG_Refocusing_Visually-Relevant_Relationships_ICCV_2019_paper.pdf">VrR-VG: Refocusing Visually-Relevant Relationships. </a> </p> 	
 	   </div> 
 	  </div> 
 	 </aside> 

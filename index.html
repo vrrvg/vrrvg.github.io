@@ -124,7 +124,7 @@
 			<td width="30%"> VD-Net <a href="https://github.com/vrrvg/vrrvg.github.io/blob/master/VD-Net.py">&nbsp; github </a></td>
 		   </tr> 
 		  </tbody> 
-		  <p> For scene graph generation, you can take the last 5000 samples as the test set. For features representation, you can use all the samples for training. </p>
+		  <p> For scene graph generation, you can take the last 5000 samples as the test set (the same setting in <a href="https://github.com/rowanz/neural-motifs/blob/master/dataloaders/visual_genome.py">neural-motifs</a>). For features representation, you can use all the samples for training. </p>
 		  <p> An implemented example for VD-Net is also provided. For choosing our complete visually-relevant relationships, multiple initial learning rates (learning from 1e-5 to 1e-2, momentum is 0.9, weight decay is 1e-4) were used and we took 10 models for voting. Additionally, to avoid overfitting, the data sample should be completely random. In each batch, the relation triplets were from different images and the labels should be different from each other. </p>
 		 </table> 
 		</div> 

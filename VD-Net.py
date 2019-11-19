@@ -1,3 +1,9 @@
+# for subject and object position embedding, the 10 dims embedding is [x1, x2, y1, y2, ins_w, ins_h, center_x / ins_w, center_y / ins_h, center_x / img_w, center_y / img_h],
+# in the final version, we use the same setting as our paper ([x1, y1, ins_h, ins_w]) and padding the rest 6 dims as 0.
+
+# for the joint embedding, the 22 dims version is 18 dims as in paper ([offset_Ox1, offset_Ox2, ...]) and [subject_x1, subject_y1, object_x1, object_y1].
+# in the final version, we use the same setting as our paper and padding the rest dims with 0. 
+
 
 class cls_model(nn.Module):
     def __init__(self, vec_size):
